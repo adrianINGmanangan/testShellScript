@@ -30,8 +30,8 @@ for branch in $branches; do
     git rm $file_path
     git commit -m "Deleted file $file_path from branch $branch"
     
-    # Push the changes using PAT
-    git push https://$pat@github.com/adrianINGmanangan/testShellScript.git $branch
+    # Force push the changes using PAT
+    git push -f https://$pat@github.com/adrianINGmanangan/testShellScript.git $branch
   else
     echo "File '$file_path' does not exist in branch '$branch'."
   fi
